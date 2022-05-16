@@ -1,0 +1,123 @@
+/* variables and fonts */
+:root {
+	--text-dark-blue: rgb(28, 29, 54);
+	--text-very-gray-blue: rgb(74, 75, 94);
+	--text-gray-blue: rgb(120, 120, 135);
+	--divider-gray-blue: rgb(231, 231, 233);
+	--text-red: rgb(244, 124, 87);
+	--bg-violet: rgb(175, 103, 233);
+	--bg-blue: rgb(101, 101, 231);
+}
+
+/* boilerplate css */
+
+body {
+	background: linear-gradient(var(--bg-violet), var(--bg-blue));
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* utility classes */
+.padding-y {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.padding-y2 {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+/* accordion styles */
+
+main {
+	max-width: 350px;
+	width: 80%;
+	margin: auto;
+}
+
+main .accordion {
+	background-color: #fff;
+	padding: 0 1.5rem 1.5rem 1.5rem;
+	border-radius: 20px;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+
+main .accordion .img-container {
+	width: 100%;
+	/* position: relative;
+	top: -6rem; */
+}
+
+main .accordion .img-container img {
+	display: block;
+	margin: auto;
+	width: 80%;
+	height: auto;
+}
+
+/* main .accordion .img-container::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: url(images/bg-pattern-mobile.svg);
+	left: 0;
+	top: 0;
+	margin: auto;
+	background-repeat: no-repeat;
+	position: absolute;
+} */
+
+main .accordion .faq h1 {
+	text-align: center;
+	color: var(--text-dark-blue);
+}
+
+main .accordion .faq .accordion-item {
+	border-bottom: 1px solid var(--divider-gray-blue);
+	font-size: 0.75rem;
+	line-height: 1.5;
+	color: var(--text-gray-blue);
+}
+
+main .accordion .faq .accordion-item .heading {
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+main .accordion .faq .accordion-item .heading:hover {
+	color: var(--text-red);
+}
+
+main .accordion .faq .accordion-item .heading img {
+	align-self: center;
+	transition: transform 0.5s;
+}
+
+main .accordion .faq .accordion-item .heading img.active {
+	transform: rotate(180deg);
+}
+
+main .accordion .faq .accordion-item .content {
+	position: relative;
+	height: auto;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s;
+}
+
+main .accordion .faq .accordion-item .content.active {
+	max-height: 5rem;
+}
