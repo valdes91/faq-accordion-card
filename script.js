@@ -8,10 +8,6 @@ faq.addEventListener('click', (e) => {
 			heading = target.parentNode;
 		}
 		const item = heading.parentNode;
-		const img = item.querySelector('.heading img');
-		const p = item.querySelector('.content');
-		p.classList.toggle('active');
-		img.classList.toggle('active');
+		item.classList.toggle('active');
 	}
 });
-// when active, accordion item content gets class active and padding-y2

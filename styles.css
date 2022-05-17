@@ -41,22 +41,25 @@ body {
 /* accordion styles */
 
 main {
-	max-width: 350px;
+	max-width: 325px;
+	min-width: 260px;
 	width: 80%;
 	margin: auto;
 }
 
 main .accordion {
 	background-color: #fff;
-	padding: 0 1.5rem 1.5rem 1.5rem;
+	padding: 7.5rem 1.5rem 1.5rem 1.5rem;
 	border-radius: 20px;
 	font-family: 'Kumbh Sans', sans-serif;
+	position: relative;
 }
 
 main .accordion .img-container {
 	width: 100%;
-	/* position: relative;
-	top: -6rem; */
+	position: absolute;
+	left: -0.25rem;
+	top: -6.5rem;
 }
 
 main .accordion .img-container img {
@@ -66,18 +69,15 @@ main .accordion .img-container img {
 	height: auto;
 }
 
-/* main .accordion .img-container::after {
-	content: '';
-	display: block;
-	width: 100%;
-	height: 100%;
-	background-image: url(images/bg-pattern-mobile.svg);
-	left: 0;
-	top: 0;
-	margin: auto;
-	background-repeat: no-repeat;
+main .accordion .img-container .mobile.bg-img {
 	position: absolute;
-} */
+	left: 13%;
+	bottom: -1rem;
+}
+
+main .accordion .faq {
+	position: relative;
+}
 
 main .accordion .faq h1 {
 	text-align: center;
@@ -88,13 +88,13 @@ main .accordion .faq .accordion-item {
 	border-bottom: 1px solid var(--divider-gray-blue);
 	font-size: 0.75rem;
 	line-height: 1.5;
-	color: var(--text-gray-blue);
 }
 
 main .accordion .faq .accordion-item .heading {
 	display: flex;
 	justify-content: space-between;
 	cursor: pointer;
+	color: var(--text-very-gray-blue);
 }
 
 main .accordion .faq .accordion-item .heading:hover {
@@ -106,7 +106,12 @@ main .accordion .faq .accordion-item .heading img {
 	transition: transform 0.5s;
 }
 
-main .accordion .faq .accordion-item .heading img.active {
+main .accordion .faq .accordion-item.active .heading {
+	color: var(--text-dark-blue);
+	font-weight: 700;
+}
+
+main .accordion .faq .accordion-item.active .heading img {
 	transform: rotate(180deg);
 }
 
@@ -116,8 +121,9 @@ main .accordion .faq .accordion-item .content {
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.5s;
+	color: var(--text-gray-blue);
 }
 
-main .accordion .faq .accordion-item .content.active {
+main .accordion .faq .accordion-item.active .content {
 	max-height: 5rem;
 }
