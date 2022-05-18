@@ -75,6 +75,10 @@ main .accordion .img-container .mobile.bg-img {
 	bottom: -1rem;
 }
 
+main .accordion .img-container .desktop {
+	display: none;
+}
+
 main .accordion .faq {
 	position: relative;
 }
@@ -126,4 +130,71 @@ main .accordion .faq .accordion-item .content {
 
 main .accordion .faq .accordion-item.active .content {
 	max-height: 5rem;
+}
+
+/* Desktop Styles */
+@media (min-width: 912px) {
+	main {
+		max-width: none;
+		min-width: none;
+		width: 65%;
+		position: relative;
+	}
+
+	main .accordion {
+		padding: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		background-image: url('images/bg-pattern-desktop.svg');
+		background-repeat: no-repeat;
+		background-size: 70%;
+		background-position: -20rem;
+	}
+
+	main .accordion .img-container {
+		position: relative;
+		left: -7rem;
+		top: 0;
+		width: 50%;
+	}
+
+	main::before {
+		content: '';
+		position: absolute;
+		background-image: url('images/illustration-box-desktop.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 40%;
+		left: -25%;
+		top: 11%;
+		width: 50%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	main .accordion .img-container .mobile {
+		display: none;
+	}
+
+	main .accordion .img-container .desktop {
+		display: block;
+		position: relative;
+		/* left: -8rem; */
+		width: 100%;
+	}
+
+	main .accordion .faq {
+		width: 50%;
+	}
+
+	main .accordion .faq h1 {
+		text-align: left;
+	}
+
+	main .accordion .faq .accordion-item {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
 }
