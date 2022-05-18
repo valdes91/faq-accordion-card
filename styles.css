@@ -180,8 +180,6 @@ main .accordion .faq .accordion-item.active .content {
 
 	main .accordion .img-container .desktop {
 		display: block;
-		position: relative;
-		/* left: -8rem; */
 		width: 100%;
 	}
 
